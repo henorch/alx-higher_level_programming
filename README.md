@@ -1,1 +1,1 @@
-My python class get started
+main project readme
