@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 
 def best_score(a_dictionary):
-    """returns a key with the biggest integer value.
-    You can assume that all values are only integers
-    If no score found, return None
-    You can assume all students have a different score
-    You are not allowed to import any module
-    """
-    if a_dictionary:
-        return max(a_dictionary, key=a_dictionary.get)
-    return None
+    """Returns a key with the biggest integer value."""
+    if not isinstance(a_dictionary, dict) or len(a_dictionary) == 0:
+        return None
+
+    ret = list(a_dictionary.keys())[0]
+    big = a_dictionary[ret]
+    for k, v in a_dictionary.items():
+        if v > big:
+            big = v
+            ret = k
+    return (ret)

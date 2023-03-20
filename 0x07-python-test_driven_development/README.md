@@ -1,51 +1,84 @@
-# Project Name
-**0x07. Python - Test-driven development**
+# Python - Test-driven development
+![alt text](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/246/giphy-4.gif)
 
-## Author's Details
-Name: *Wendy Munyasi.*
+In this project, I started practicing test-driven development using `docstring`and `unittest` in Python.
 
-Email: *wendymunyasi@gmail.com*
+## Tests :heavy_check_mark:
 
-Tel: *+254707240068.*
+* [tests](./tests): Folder of test files. Includes both Holberton-provided ones as well as the following eight independently-developed:
+  * [0-add_integer.txt](./tests/0-add_integer.txt)
+  * [2-matrix_divided.txt](./tests/2-matrix_divided.txt)
+  * [3-say_my_name.txt](./tests/3-say_my_name.txt)
+  * [4-print_square.txt](./tests/4-print_square.txt)
+  * [5-text_indentation.txt](./tests/text_indentation.txt)
+  * [6-max_integer_test.py](./tests/6-max_integer_test.py)
+  * [100-matrix_mul.txt](./tests/100-matrix_mul.txt)
+  * [101-lazy_matrix_mul.txt](./tests/101-lazy_matrix_mul.txt)
 
-##  Requirements
+## Function Prototypes :floppy_disk:
 
-### Python Scripts
-*   Allowed editors: `vi`, `vim`, `emacs`.
-*   All your files will be interpreted/compiled on Ubuntu 20.04 LTS using gcc, using python3 (version 3.8.5).
-*   All your files should end with a new line.
-*   The `main.py` files are used to test your functions, but you don’t have to push them to your repo.
-*   The first line of all your files should be exactly `#!/usr/bin/python3`.
-*   Your code should use the pycodestyle (version `2.8.*`).
-*   All your files must be executable.
-*   All your test files should be inside a folder `tests`.
-*   All your test files should be text files (extension: `.txt`).
-*   All your tests should be executed by using this command: `python3 -m doctest ./tests/*`.
-*   The length of your files will be tested using `wc`.
-*   All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`).
-*   All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`).
-*   All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)`' and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`).
-*   A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified).
+Prototypes for functions written in this project:
 
+| File                     | Prototype                                    |
+| ------------------------ | -------------------------------------------- |
+| `0-add_integer.py`       | `def add_integer(a, b=98):`                  |
+| `2-matrix_divided.py`    | `def matrix_divided(matrix, div):`           |
+| `3-say_my_name.py`       | `def say_my_name(first_name, last_name=""):` |
+| `4-print_square.py`      | `def print_square(size):`                    |
+| `5-text_indentation.py`  | `def text_indentation(text):`                |
+| `100-matrix_mul.py`      | `def matrix_mul(m_a, m_b):`                  |
+| `101-lazy_matrix_mul.py` | `def lazy_matrix_mul(m_a, m_b):`             |
+| `102-python.c`           | `void print_python_string(PyObject *p);`     |
 
-## Project Description
-What’s an interactive test.
-Why tests are important.
-How to write Docstrings to create tests.
-How to write documentation for each module and function.
-What are the basic option flags to create tests.
-How to find edge cases.
+## Tasks :page_with_curl:
 
-* **0. Integers addition** - Write a function that adds 2 integers. - `0-add_integer.py`, `tests/0-add_integer.txt`.
-* **1. Divide a matrix** - Write a function that divides all elements of a matrix. - `2-matrix_divided.py`, `tests/2-matrix_divided.txt`.
-* **2. Say my name** - Write a function that prints `My name is <first name> <last name>`. - `3-say_my_name.py`, `tests/3-say_my_name.txt`.
-* **3. Print square** - Write a function that prints a square with the character `#`. - `4-print_square.py`, `tests/4-print_square.txt`.
-* **4. Text indentation** - Write a function that prints a text with 2 new lines after each of these characters: `.`, `?` and `:`. - ` 5-text_indentation.py`, `tests/5-text_indentation.txt`.
-* **5. Max integer - Unittest** - Write unittests for the function `def max_integer(list=[]):`. - `tests/6-max_integer_test.py`.
-* **6. Matrix multiplication** - Write a function that multiplies 2 matrices. - `100-matrix_mul.py`, `tests/100-matrix_mul.txt`.
-* **7. Lazy matrix multiplication** - Write a function that multiplies 2 matrices by using the module [NumPy](https://numpy.org/). - `101-lazy_matrix_mul.py`, `tests/101-lazy_matrix_mul.txt`.
-* **8. CPython #3: Python Strings** - Create a function that prints Python strings. - `102-python.c`.
+* **0. Integers addition**
+  * [0-add_integer.py](./0-add_integer.py): Python function that returns the integer addition of two numbers.
+  * If either of `a` or `b` is not an `int` or `float`, a `TypeError` is raised with the message `a must be an integer` or `b must be an integer`.
+  * If either of `a` or `b` is a `float`, it is casted to an `int` before addition.
 
-## Collaborate
+* **1. Divide a matrix**
+  * [2-matrix_divided.py](./2-matrix_divided.py): Python function that divides all elements of a matrix by a common divisor.
+  * Returns a new matrix representing the division of all elements of `matrix` by `div`.
+  * Quotients are rounded to two decimal places.
+  * If `matrix` is not a list of lists of `int`s or `float`s, a `TypeError` is raised with the message `matrix must be a matrix (list of lists) of
+  integers/floats`.
+  * If `matrix` contains rows of different lengths, a `TypeError` is raised with the message `Each row of the matrix must have the same size`.
+  * If the divisor `div` is not an `int` or `float`, a `TypeError` is raised with the message `div must be a number`.
+  * If `div` is `0`, a `ZeroDivisionError` is raised with the message `division by zero`.
 
-To collaborate, reach me through my email address wendymunyasi@gmail.com.
+* **2. Say my name**
+  * [3-say_my_name.py](./3-say_my_name.py): Python function that prints a name in the format `My name is <first_name> <last_name>`.
+  * If either of `first_name` or `last_name` is not a `str`, a `TypeError` is raised with the message `first_name must be a string` or `last_name must be a string`.
+
+* **3. Print square**
+  * [4-print_square.py](./4-print_square.py): Python function that prints a square using the `#` character.
+  * The paramter `size` represents the height/width of the square.
+  * If `size` is not an `int`, a `TypeError` is raised  with the message, `size must be an integer`.
+  * If `size` is less than `0`, a `ValueError` is raised with the message `size must be >= 0`.
+
+* **4. Text indentation**
+  * [5-text_indentation.py](./5-text_indentation.py): Python function that prints text with indentation.
+  * Two new lines are printed after any `.`, `?`, or `:` character.
+  * If `text` is not a `str`, a `TypeError` is raised with the message `text must be a string`.
+  * No spaces are printed at the beginning or end of each printed line.
+
+* **5. Max integer - Unittest**
+  * [tests/6-max_integer_test.py](./tests/6-max_integer_text.py): Python class/scriptthat runs unittests for the function `def max_integer(list=[]):`.
+
+* **6. Matrix multiplication**
+  * [100-matrix_mul.py](./100-matrix_mul.py): Python function that multiplies two matrices.
+  * Returns a new matrix representing the multiplication of `m_a` by `m_b`.
+  * If either of `m_a` or `m_b` is empty (ie. `== []` or `== [[]]`), a `ValueError` is raised with the message `m_a can't be empty` or `m_b can't be empty`.
+  * If either of `m_a` or `m_b` is not a list, a `TypeError` is raised with the message `m_a must be a list` or `m_b` must be a list.
+  * If either of `m_a` or `m_b` is not a list of lists, a `TypeError` is raised with the message `m_a must be a list of lists` or `m_b must be a list of lists`.
+  * If either of `m_a` or `m_b` is not a list of lists of `int`s or `float`s, a `TypeError` is raised with the message `m_a should contain only integers or floats` or `m_b should contain only integers or floats`.
+  * If either of `m_a` or `m_b` contains rows of different lengths, a `TypeError` is raised with the message `each row of m_a must should be of the same size` or `each row of m_b must should be of the same size`.
+  * If `m_a` and `m_b` cannot be multiplied (ie. row size of `m_a` does not match column size of `m_b`), a `ValueError` is raised with the message `m_a and m_b can't be multiplied`.
+
+* **7. Lazy matrix multiplication**
+  * [101-lazy_matrix_mul.py](./101-lazy_matrix_mul.py): Python function that multiplies two matrices using the module `NumPy`.
+  * Identical in function to [100-matrix_mul.py](./100-matrix_mul.py).
+
+* **8. CPython #3: Python Strings**
+  * [102-python.c](./102-python.c): C function that prints basic information about Python string objects.
